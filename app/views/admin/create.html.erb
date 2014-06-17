@@ -1,0 +1,14 @@
+
+	<h1>Enter Category Details </h1>
+
+ <%= form_for @admin, :url => url_for(:controller => 'admin', :action => 'create') do |f| %>
+	<%= f.label :Category_Name %>
+	<%= f.text_field :name %>
+<%= f.submit "save" %>
+<% end %>
+
+
+
+
+
+  

@@ -1,0 +1,20 @@
+
+<h1> Enter SubCategory Details </h1>
+<%= form_for @category, :url => url_for(:controller => 'categories', :action => 'create') do |f| %>
+<table>
+<tr>
+	<td><%= f.label :Category_Id %></td>
+
+	<td><%= select(:sub_category, :category_id, @admin.collect {|e| [e.name, e.id]})%></td>
+	</tr>
+	<tr>
+	<td><%= f.label :SubCategory_Name %></td>
+	<td><%= f.text_field :Sub_name %></td>
+	</tr>
+	</table>
+	
+<%= f.submit "save" %>
+<% end %>
+
+
+<li><%= link_to "BACK", categories_path %></li>

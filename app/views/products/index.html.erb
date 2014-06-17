@@ -1,0 +1,32 @@
+<h1> THE PRODUCT LIST</h1>
+
+<%= link_to "Enter New Product", new_product_path %>
+
+<table>
+<tr>
+
+<th>SUB_CATEGORY ID</th>
+<th>PRODUCT NAME</th>
+<th> FILE NAME </th>
+<th> DESCRIPTION</th>
+<th>PRICE PER UNIT</th>
+<th>NO OF STOCK</th>
+<th>ACTIONS</th>
+</tr>
+<% @products.each do |a| %>
+<tr>
+
+<td><%= a.sub_category_id %></td>
+<td><%= a.productName %></td>
+<td><%= a.avatar_file_name %></td>
+<td><%= a.description %></td>
+<td><%= a.price %></td>
+<td><%= a.stock %></td>
+<td>
+	<%= link_to "Delete", product_path(:id => a.id) , method: :delete %> / <%= link_to "Edit", edit_product_path(:id => a.id) %>
+
+</td>
+
+</tr>
+<% end %>
+</table>

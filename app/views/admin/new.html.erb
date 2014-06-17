@@ -1,0 +1,20 @@
+
+<h1> ENTER CATEGORY DETAILS </h1>
+
+  <div>
+    <%= form_for @admin, :url => url_for(:controller => 'admin', :action => 'create') do |f| %>
+    <table>
+    <tr>
+    <td><%= f.label :Category_Name %></td>   
+      <td><%= f.text_field :name %></td>
+      </tr>
+      </table>
+      <%= f.submit "Save" %>
+    <% end %>
+  </div>
+
+
+  <li><%= link_to "BACK",admin_index_path %></li>
+
+
+

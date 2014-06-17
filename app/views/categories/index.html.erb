@@ -1,0 +1,27 @@
+
+<h1> THE SUB CATEGORY LIST</h1>
+<%= link_to "Enter New Sub Category", new_category_path %>
+
+<table>
+<tr>
+<th>CATEGORY ID</th>
+<th>CATEGORY NAME</th>
+
+<th>ACTION</th>
+</tr>
+<% @categories.each do |a| %>
+<tr>
+
+<td><%= a.category_id %></td>
+
+<td><%= a.Sub_name %></td>
+
+<td>
+	<%= link_to "Delete", category_path(:id => a.id) , method: :delete %> / <%= link_to "Edit", edit_category_path(:id => a.id) %>
+
+</td>
+</tr>
+<% end %>
+</table>
+
+  

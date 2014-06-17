@@ -1,0 +1,39 @@
+
+<h1> ENTER PRODUCT DETAILS </h1>
+
+<%= form_for(@product) do |f| %>
+
+<table>
+<tr>
+	<td><%= f.label :SubCategory_Id %></td>
+	<td><%= select(:product, :sub_category_id, @category.collect {|e| [e.Sub_name, e.id]})%></td>
+</tr>
+	<tr>
+	<td><%= f.label :Product_Name %></td>
+	<td><%= f.text_field :productName %></td>
+</tr>
+
+<tr>
+	<td><%= f.label :Photo %></td>
+	<td><%= f.file_field :avatar %></td>
+</tr>
+
+<tr>
+	<td><%= f.label :Description %></td>
+	<td><%= f.text_field :description %></td>
+</tr>
+<tr>
+	<td><%= f.label :Price %></td>
+	<td><%= f.text_field :price %></td>
+</tr>
+<tr>
+	<td><%= f.label :No_Of_Stocks %></td>
+	<td><%= f.text_field :stock %></td>
+	</tr>
+	</table>
+
+<%= f.submit "save" %>
+<% end %>
+
+
+ <li><%= link_to "BACK", products_path %></li>

@@ -1,0 +1,9 @@
+
+<h1>Categories#create</h1>
+<%= form_for(:Categories, :url=>{:action=>'create'}) do |f| %>
+	<%= f.label :CategoryId %>
+	<%= f.text_field :category_id %>
+	<%= f.label :SubCategoryName %>
+	<%= f.text_field :Sub_name %>
+<%= f.submit "save" %>
+<% end %>

@@ -1,0 +1,27 @@
+
+<h1> THE CATEGORY LIST</h1>
+<%= link_to "Enter New Category", new_admin_path %>
+
+<table>
+<tr>
+
+<th>CATEGORY ID</th>
+
+<th>CATEGORY NAME</th>
+<th>ACTIONS</th>
+</tr>
+<% @admins.each do |admin| %>
+<tr>
+
+<td><%= admin.id %></td>
+
+<td><%= admin.name %></td>
+<td>
+ <%= link_to "Delete", admin_path(:id => admin.id) , method: :delete %> / <%= link_to "Edit",edit_admin_path(:id => admin.id) %>
+</td>
+</tr>
+<% end %>
+</table>
+
+
+
